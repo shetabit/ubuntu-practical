@@ -111,7 +111,7 @@ unzip file.zip -d destination_folder
 ```bash
 sudo nano /etc/apache2/sites-available/000-default.conf
 
-//Append this lines and save:
+//Append and save:
 <VirtualHost *:80>
   ServerName myapp.dev
   DocumentRoot "/var/www/html/myapp/public"
