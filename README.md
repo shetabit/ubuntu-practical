@@ -76,3 +76,53 @@ sudo apt update -q
 ```bash
 sudo systemctl restart network-manager.service
 ```
+
+### Upload and Download to server via SSH
+```bash
+//upload
+scp [source file] [username]@[destination server]
+
+//download
+scp [username]@[destination server]:[local path]
+
+//example
+scp /home/projects/project.zip user@217.219.182.39:/var/www/html
+
+scp  user@217.219.182.39:/var/www/storage/app/Laravel/2018-04-25-20-45-22.zip /home/hashem/
+```
+### Set cronjob
+```bash
+sudo apt-get update
+sudo apt-get install cron
+
+crontab -e
+//add your command
+* * * * * /usr/bin/php /var/www/domain.com/backup.php > /dev/null 2>&1
+```
+
+### Unzip zip files
+```bash
+sudo apt-get install unzip
+
+unzip file.zip -d destination_folder
+```
+
+### Apache VirtualHost
+```bash
+sudo nano /etc/apache2/sites-available/000-default.conf
+
+//Append this lines and save:
+<VirtualHost *:80>
+  ServerName myapp.dev
+  DocumentRoot "/var/www/html/myapp/public"
+  <Directory "/var/www/html/myapp/public">
+    AllowOverride all
+  </Directory>
+</VirtualHost>
+
+sudo nano /etc/hosts
+//Add 
+127.0.0.1 myapp.dev
+
+sudo service apache2 restart
+```
