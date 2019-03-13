@@ -28,7 +28,7 @@ sudo apt install app_name
 //remove
 sudo apt remove app_name
 
-//remove complete
+//remove completely
 sudo apt remove --purge app_name
 ```
 ### Install and Remove deb packages
