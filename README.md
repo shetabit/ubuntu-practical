@@ -59,6 +59,8 @@ alias alias_name = "original command"
 //example
 alias art = "php artisan"
 alias gp = "git push origin master"
+
+source ~/.bashrc
 ```
 ### Repository update error
 ```bash
