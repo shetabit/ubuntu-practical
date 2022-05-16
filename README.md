@@ -129,7 +129,7 @@ sudo nano /etc/hosts
 sudo service apache2 restart
 ```
 
-## Laravel storage permissions
+### Laravel storage permissions
 ```bash
 sudo chown -R $USER:www-data storage
 chmod -R 775 storage
