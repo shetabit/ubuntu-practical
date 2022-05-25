@@ -134,3 +134,12 @@ sudo service apache2 restart
 sudo chown -R $USER:www-data storage
 chmod -R 775 storage
 ```
+
+### Laravel Installer
+```bash
+composer global require laravel/installer
+
+sudo nano .bashrc
+//append
+export PATH="$HOME/.composer/vendor/bin:$PATH"
+```
