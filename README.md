@@ -143,3 +143,11 @@ sudo nano .bashrc
 //append
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 ```
+
+### Install openconnect
+```bash
+sudo apt-get update
+sudo /sbin/modprobe tun
+sudo apt-get install openconnect
+sudo openconnect SERVER_ADDRESS
+```
