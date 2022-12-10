@@ -151,3 +151,7 @@ sudo /sbin/modprobe tun
 sudo apt-get install openconnect
 sudo openconnect SERVER_ADDRESS
 ```
+### Switch php version
+```bash
+sudo update-alternatives --config php
+```
