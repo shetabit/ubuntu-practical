@@ -92,6 +92,15 @@ scp /home/projects/project.zip user@217.219.182.39:/var/www/html
 
 scp  user@217.219.182.39:/var/www/storage/app/Laravel/2018-04-25-20-45-22.zip /home/hashem/
 ```
+###Transfer file/directories with rsync
+```
+//simple file
+rsync /home/simple.txt root@x.x.x.x:/home
+
+//with directory
+rsync -rt /home/transfer_me root@x.x.x.x:/home
+```
+
 ### Set cronjob
 ```bash
 sudo apt-get update
