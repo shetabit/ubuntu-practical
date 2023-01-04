@@ -163,4 +163,8 @@ sudo openconnect SERVER_ADDRESS
 ### Switch php version
 ```bash
 sudo update-alternatives --config php
+
+sudo a2dismod php8.1
+sudo a2enmod php8.2
+sudo systemctl restart apache2
 ```
