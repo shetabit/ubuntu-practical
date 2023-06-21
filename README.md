@@ -172,5 +172,5 @@ sudo service apache2 restart
 mysqldump -u username -p db_name > db_backup.sql
 
 //import
-mysqlimport -u root -p db_name < db_backup.sql
+mysqlimport -u username -p db_name < db_backup.sql
 ```
