@@ -169,7 +169,7 @@ sudo service apache2 restart
 ### Export & Import large database
 ```bash
 //export
-mysqldump -u username -p db_name > db_name.sql
+mysqldump -u username -p db_name > db_backup.sql
 
 //import
 mysqlimport -u root -p db_name < db_backup.sql
