@@ -88,7 +88,7 @@ scp [source file] [username]@[destination server]
 scp [username]@[destination server]:[local path]
 
 //example
-scp /home/projects/project.zip user@217.219.182.39:/var/www/html
+scp -P 3031 /home/projects/project.zip user@217.219.182.39:/var/www/html
 
 scp -P 3031 user@217.219.182.39:/var/www/storage/app/Laravel/2018-04-25-20-45-22.zip /home/hashem/
 ```
