@@ -90,7 +90,7 @@ scp [username]@[destination server]:[local path]
 //example
 scp /home/projects/project.zip user@217.219.182.39:/var/www/html
 
-scp  user@217.219.182.39:/var/www/storage/app/Laravel/2018-04-25-20-45-22.zip /home/hashem/
+scp -P 3031 user@217.219.182.39:/var/www/storage/app/Laravel/2018-04-25-20-45-22.zip /home/hashem/
 ```
 ### Transfer file/directories with rsync
 ```
@@ -165,4 +165,12 @@ sudo openconnect SERVER_ADDRESS
 sudo update-alternatives --config php
 
 sudo service apache2 restart
+```
+### Export & Import large database
+```bash
+//export
+mysqldump -u username -p db_name > db_name.sql
+
+//import
+mysqlimport -u root -p db_name < db_backup.sql
 ```
