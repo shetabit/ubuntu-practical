@@ -174,3 +174,9 @@ mysqldump -u username -p database_name > data-dump.sql
 //import
 mysql -u username -p new_database < data-dump.sql
 ```
+### Change www directory owner and permissions
+```bash
+sudo adduser my_user www-data
+sudo chgrp www-data /var/www
+sudo chmod 764 -R /var/www/html
+```
