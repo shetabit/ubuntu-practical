@@ -180,3 +180,13 @@ mysql -u username -p new_database < data-dump.sql
 ```
 ssh-keygen -R <server_ip>
 ```
+
+### Increase PHP Memory Limits
+//Edit the PHP.ini File
+```
+memory_limit = 256M
+upload_max_filesize = 12M
+post_max_size = 13M
+file_uploads = On
+max_execution_time = 180
+```
