@@ -190,3 +190,17 @@ post_max_size = 13M
 file_uploads = On
 max_execution_time = 180
 ```
+
+### Integration MongoDB Laravel
+
+install on Ubuntu:
+```
+sudo apt install php8.1-mongodb
+```
+List the modules
+```
+php -m
+```
+
+then follow bellow link:
+https://github.com/mongodb/laravel-mongodb
