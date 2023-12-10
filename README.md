@@ -164,7 +164,13 @@ sudo openconnect SERVER_ADDRESS
 ```bash
 sudo update-alternatives --config php
 
-sudo service apache2 restart
+//disable current php version
+sudo a2dismod php8.1
+
+//enable new php version
+sudo a2enmod php8.0
+
+sudo systemctl restart apache2
 ```
 ### Export & Import large database
 ```bash
@@ -190,17 +196,3 @@ post_max_size = 13M
 file_uploads = On
 max_execution_time = 180
 ```
-
-### Integration MongoDB Laravel
-
-install on Ubuntu:
-```
-sudo apt install php8.1-mongodb
-```
-List the modules
-```
-php -m
-```
-
-then follow bellow link:
-https://github.com/mongodb/laravel-mongodb
