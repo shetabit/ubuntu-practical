@@ -118,6 +118,26 @@ sudo apt-get install unzip
 unzip file.zip -d destination_folder
 ```
 
+### Config www directory www-data user in LAMP
+```bash
+sudo adduser username www-data
+sudo chown -R username:www-data /var/www/html
+
+//enable mod_rewrite
+sudo a2enmod rewrite
+
+sudo nano /etc/apache2/sites-available/000-default.conf
+//append end of file
+<Directory /var/www/html>
+    Options Indexes FollowSymLinks
+    AllowOverride All
+    Require all granted
+</Directory>
+
+//restart apache
+sudo systemctl restart apache2
+```
+
 ### Apache VirtualHost
 ```bash
 sudo nano /etc/apache2/sites-available/000-default.conf
