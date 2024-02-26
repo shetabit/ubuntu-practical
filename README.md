@@ -216,3 +216,10 @@ post_max_size = 13M
 file_uploads = On
 max_execution_time = 180
 ```
+
+### Absolute php & composer commands in server
+```
+/usr/local/php81/bin/php artisan command
+
+/usr/local/php81/bin/php /usr/local/bin/composer.phar command
+```
