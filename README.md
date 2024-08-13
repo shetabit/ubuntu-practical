@@ -223,3 +223,45 @@ max_execution_time = 180
 
 /usr/local/php81/bin/php /usr/local/bin/composer.phar command
 ```
+### Installing and Enabling OPCache
+
+# 1. Install OPCache: 
+```
+sudo apt install php8.x-opcache
+```
+# 2. Enable OPCache:
+
+Locate php.ini
+```
+php --ini
+```
+
+open php.ini
+```
+sudo nano /etc/php/8.3/cli/php.ini
+```
+
+Edit php.ini
+```
+zend_extension=opcache
+
+; Recommended OPCache settings
+opcache.enable=1
+opcache.memory_consumption=256
+opcache.interned_strings_buffer=16
+opcache.max_accelerated_files=20000
+opcache.revalidate_freq=60
+opcache.fast_shutdown=1
+opcache.enable_cli=1
+opcache.validate_timestamps=1
+opcache.file_cache=/tmp
+opcache.file_update_protection=2
+opcache.max_wasted_percentage=5
+opcache.opt_debug_level=0
+```
+
+And restart apache
+```
+sudo systemctl restart apache2
+```
+
