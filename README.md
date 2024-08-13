@@ -225,11 +225,11 @@ max_execution_time = 180
 ```
 ### Installing and Enabling OPCache
 
-# 1. Install OPCache: 
+##### 1. Install OPCache: 
 ```
 sudo apt install php8.x-opcache
 ```
-# 2. Enable OPCache:
+##### 2. Enable OPCache:
 
 Locate php.ini
 ```
