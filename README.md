@@ -265,3 +265,9 @@ And restart apache
 sudo systemctl restart apache2
 ```
 
+
+### Change the remote repository URL
+```
+git remote set-url origin <new-repository-URL>
+```
+
