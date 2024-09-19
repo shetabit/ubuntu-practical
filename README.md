@@ -265,3 +265,17 @@ And restart apache
 sudo systemctl restart apache2
 ```
 
+### My aliases in ubuntu
+##### Append these lines in .bashrc or .zshrc file
+```
+alias www="cd /var/www/html"
+alias art="php artisan"
+alias laravel="$HOME/.config/composer/vendor/bin/laravel"
+alias perm="sudo chown -R $USER:www-data storage && chmod -R 775 storage"
+alias apr="sudo systemctl restart apache2"
+alias sau="sudo apt update"
+alias sax="sudo apt upgrade"
+alias cu="composer update"
+alias ci="composer install"
+```
+
