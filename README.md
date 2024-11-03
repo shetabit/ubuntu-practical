@@ -278,4 +278,8 @@ alias sax="sudo apt upgrade"
 alias cu="composer update"
 alias ci="composer install"
 ```
+### Sed command
+```
+sed 's/\sDEFINER=`[^`]*`@`[^`]*`//g' -i atlas_backup_2023-7-1.sql
+```
 
