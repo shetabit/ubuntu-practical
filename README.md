@@ -282,4 +282,18 @@ alias ci="composer install"
 ```
 sed 's/\sDEFINER=`[^`]*`@`[^`]*`//g' -i atlas_backup_2023-7-1.sql
 ```
+### Supervisor error
+```
+error: <class 'xmlrpc.client.ProtocolError'>, <ProtocolError ...
+```
 
+##### Solve
+First, check supervsiord.log and check error:
+```
+cd /var/log/supervisor/supervisord.log
+```
+And
+```
+service supervisor stop
+service supervisor start
+```
