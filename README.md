@@ -288,7 +288,7 @@ error: <class 'xmlrpc.client.ProtocolError'>, <ProtocolError ...
 ```
 
 ##### Solve
-First, check supervsiord.log and check error:
+First, open supervsiord.log and check error:
 ```
 cd /var/log/supervisor/supervisord.log
 ```
