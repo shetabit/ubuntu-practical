@@ -294,6 +294,11 @@ cd /var/log/supervisor/supervisord.log
 ```
 And
 ```
+// In Ubuntu server
 service supervisor stop
 service supervisor start
+
+//In Centos server
+service supervisord stop
+service supervisord start
 ```
