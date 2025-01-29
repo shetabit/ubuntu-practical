@@ -302,3 +302,13 @@ service supervisor start
 service supervisord stop
 service supervisord start
 ```
+### Couldn't start apache2 & mysql after remove logs
+```
+sudo mkdir /var/log/apache2
+sudo systemctl start apache2
+
+sudo mkdir /var/log/mysql
+sudo touch /var/log/mysql/error.log
+sudo chown -R mysql: /var/log/mysql
+sudo systemctl start mysql
+```
