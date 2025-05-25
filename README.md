@@ -312,3 +312,8 @@ sudo touch /var/log/mysql/error.log
 sudo chown -R mysql: /var/log/mysql
 sudo systemctl start mysql
 ```
+
+### Checking if an IP address is blocked on the server
+```
+csf -g your-ip-address
+```
