@@ -181,17 +181,17 @@ sudo apt-get install openconnect
 sudo openconnect SERVER_ADDRESS
 ```
 ### Switch php version
+##### Switch PHP Version for CLI:
 ```bash
 sudo update-alternatives --config php
-
-//disable current php version
-sudo a2dismod php8.1
-
-//enable new php version
-sudo a2enmod php8.0
-
+```
+#####  Switch PHP Version for Apache:
+```bash
+sudo a2dismod phpX.X  # Disable the current PHP module
+sudo a2enmod phpY.Y  # Enable the new PHP module
 sudo systemctl restart apache2
 ```
+
 ### Export & Import large database
 ```bash
 //export
